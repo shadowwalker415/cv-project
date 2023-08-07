@@ -24,8 +24,10 @@ const navSmoothScroll = function () {
 };
 
 // Preventing default link behaviour on click for card link btns and hero link btns
-const preventingDefault = function () {
-  const btnLinks = document.querySelectorAll('.link-btn');
+const preventLinkDefault = function (className) {
+  if (!typeof className === 'string') return;
+  const btnLinks = document.querySelectorAll(`.${className}`);
+  if (!btnLinks) return;
   btnLinks.forEach(btn =>
     btn.addEventListener('click', e => {
       e.preventDefault();
@@ -69,7 +71,7 @@ const stickyNav = function (elClassName, parent) {
   const obsever = new IntersectionObserver(
     entry => {
       [currentEntry] = entry;
-      console.log(currentEntry);
+      // console.log(currentEntry);
       if (currentEntry.isIntersecting === false) {
         parentEl.classList.add('sticky');
       } else {
@@ -86,11 +88,25 @@ const stickyNav = function (elClassName, parent) {
   obsever.observe(observedEl);
 };
 
-const heroBtnScroll = function (parentClass) {
+// Implementing smooth scroll on both hero btns with event delegation
+const heroBtnScroll = function (parentClass, btnclassName) {
+  //Where parentClass should be the class name of the parent container
+  // btnClass name should be the class name of the bnt links
   const heroBtnContainer = document.querySelector(`.${parentClass}`);
+  heroBtnContainer.addEventListener('click', e => {
+    if (!e.target.classList.contains(`${btnclassName}`)) return;
+    // console.log(e.target);
+    const targetBtn = e.target;
+    const targetHref = targetBtn.attributes[0].value.slice(1);
+    const sectionEl = document.getElementById(`${targetHref}`);
+    sectionEl.scrollIntoView({
+      behavior: 'smooth',
+    });
+  });
 };
 
+heroBtnScroll('btn-container', 'link-btn');
 stickyNav('hero-section', 'body');
 navSmoothScroll();
-preventingDefault();
+preventLinkDefault('link-btn');
 displayAccordionText();
