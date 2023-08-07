@@ -311,7 +311,7 @@ into the body classList */
   display: none;
 }
 
-/* These should into the button element of the accordion item */
+/* These should into the html button element of the accordion item */
 .close-accordion .accordion-icon[name='chevron-down-outline'] {
   display: block;
 }

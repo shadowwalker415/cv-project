@@ -55,6 +55,42 @@ const displayAccordionText = function () {
   });
 };
 
+// Sticky Nav functionality
+const stickyNav = function (elClassName, parent) {
+  // Where elClassName argument will be  class hero-section
+  // And parent will be the body tag
+  console.log(typeof elClassName);
+  if (!typeof elClassName === 'string') return 'elClassName must be string';
+  const observedEl = document.querySelector(`.${elClassName}`);
+  const parentEl = document.querySelector(`${parent}`);
+  if (!observedEl && !parentEl) return;
+
+  // Implementing the callback for the intersection observer
+  const obsever = new IntersectionObserver(
+    entry => {
+      [currentEntry] = entry;
+      console.log(currentEntry);
+      if (currentEntry.isIntersecting === false) {
+        parentEl.classList.add('sticky');
+      } else {
+        parentEl.classList.remove('sticky');
+      }
+    },
+    {
+      root: null,
+      rootMargin: '-8px',
+    }
+  );
+
+  // calling the observer
+  obsever.observe(observedEl);
+};
+
+const heroBtnScroll = function (parentClass) {
+  const heroBtnContainer = document.querySelector(`.${parentClass}`);
+};
+
+stickyNav('hero-section', 'body');
 navSmoothScroll();
 preventingDefault();
 displayAccordionText();
