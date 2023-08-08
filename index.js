@@ -89,12 +89,16 @@ const stickyNav = function (elClassName, parent) {
 };
 
 // Implementing smooth scroll on both hero btns with event delegation
-const heroBtnScroll = function (parentClass, btnclassName) {
+const heroBtnScroll = function (parentClass, btnClassName) {
   //Where parentClass should be the class name of the parent container
   // btnClass name should be the class name of the bnt links
+
+  if (!typeof parentClass === 'string' && !typeof btnClassName === 'string')
+    return;
   const heroBtnContainer = document.querySelector(`.${parentClass}`);
+  if (!heroBtnContainer) return;
   heroBtnContainer.addEventListener('click', e => {
-    if (!e.target.classList.contains(`${btnclassName}`)) return;
+    if (!e.target.classList.contains(`${btnClassName}`)) return;
     // console.log(e.target);
     const targetBtn = e.target;
     const targetHref = targetBtn.attributes[0].value.slice(1);
