@@ -152,11 +152,11 @@ into the body classList */
   opacity: 0.5;
 }
 
-.closed {
+.close-textbox {
   display: none;
 }
 
-.open {
+.open-textbox {
   display: block;
 }
 
@@ -178,7 +178,6 @@ into the body classList */
 
 .hero-section {
   background-color: #edf2ff;
-  height: 100vh;
 }
 
 .hero-img {
@@ -190,6 +189,30 @@ into the body classList */
   display: flex;
   gap: 4.8rem;
   transition: all 0 3s;
+}
+
+.mobile-nav-btn {
+  top: 0;
+  left: 0;
+  background: none;
+  cursor: pointer;
+  /* outline: none; */
+  border: none;
+  display: none;
+}
+
+.mobile-nav-icon {
+  height: 4.2rem;
+  width: 4.2rem;
+  display: none;
+}
+
+.show-mobile-menu .mobile-nav-icon[name='menu-outline'] {
+  display: block;
+}
+
+.show-close-icon .mobile-nav-icon[name='close-outline'] {
+  display: block;
 }
 
 .link-item:link,
@@ -290,13 +313,13 @@ into the body classList */
 }
 
 .accordion-btn {
-  outline: none;
   background: none;
   border: none;
   cursor: pointer;
 }
 
-.accordion-icon[name='chevron-down-outline'] {
+.accordion-icon[name='chevron-down-outline'],
+.accordion-icon[name='chevron-up-outline'] {
   color: #f0f8ff;
   width: 3.2rem;
   height: 3.2rem;
@@ -304,11 +327,7 @@ into the body classList */
 }
 
 .accordion-icon[name='chevron-up-outline'] {
-  color: #f0f8ff;
-  width: 3.2rem;
-  height: 3.2rem;
   grid-column: 2;
-  display: none;
 }
 
 /* These should into the html button element of the accordion item */
