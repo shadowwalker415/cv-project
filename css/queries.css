@@ -1,0 +1,55 @@
+@media (max-width: 80em) {
+  .main-heading {
+    font-size: 6rem;
+  }
+
+  .grid--3--columns {
+    gap: 2rem;
+  }
+
+  /* .grid-accordion {
+    padding: 0 6.2rem;
+  } */
+
+  .hero-container {
+    height: 45vh;
+  }
+
+  .btn-container {
+    margin-top: 0;
+  }
+
+  .secondary-heading {
+    font-size: 4rem;
+  }
+
+  .hero-img {
+    max-width: 78%;
+    height: auto;
+  }
+}
+
+@media (max-width: 68em) {
+  .hero-img {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .grid--3--columns {
+    gap: 1rem;
+  }
+
+  .grid--3--columns {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5.2rem;
+  }
+
+  #card-3 {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 0 24rem;
+  }
+}
+
+@media (max-width: 57em) {
+}
