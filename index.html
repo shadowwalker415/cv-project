@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>John Kwo Nkwelle</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/queries.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -49,7 +50,7 @@
     </header>
     <main>
       <section class="hero-section" id="hero-section">
-        <div class="grid-container grid--2--columns">
+        <div class="hero-container grid--2--columns">
           <div class="hero-content-container">
             <h1 class="main-heading">John Nkwelle</h1>
             <p class="hero-text-content">
@@ -60,18 +61,21 @@
               websites and UIs for a great user experience. Click on learn more
               to find out why you should hire me.
             </p>
-            <div class="btn-container">
+            <div class="hero-btn-container">
               <a href="#contact-me" class="link-btn btn--primary">Hire Me</a>
               <a href="#about-me" class="link-btn btn--secondary"
                 >Learn More &rarr;</a
               >
             </div>
           </div>
-          <img
-            class="hero-img"
-            src="img/hero-img.jpg"
-            alt="image of john nkwelle"
-          />
+          <!-- Added a hero img container -->
+          <div class="hero-img-container">
+            <img
+              class="hero-img"
+              src="img/hero-img.jpg"
+              alt="image of john nkwelle"
+            />
+          </div>
         </div>
       </section>
       <section class="section-projects" id="section-projects">
@@ -79,7 +83,7 @@
           <h2 class="section-heading">PROJECTS</h2>
           <h3 class="secondary-heading">Take a peek at my work</h3>
           <div class="cards-container grid--3--columns">
-            <div class="card">
+            <div class="card" id="card-1">
               <ion-icon class="card-icon" name="code-slash-outline"></ion-icon>
               <h4 class="card-title">Project Title</h4>
               <p class="card-text">
@@ -88,9 +92,11 @@
                 numquam illo ratione voluptatum placeat minima in molestias
                 exercitationem eum, qui maiores? Aspernatur?
               </p>
-              <a href="#" class="link-btn btn--primary">Repository</a>
+              <a href="#" class="link-btn btn--primary" id="card-cta-1"
+                >Repository</a
+              >
             </div>
-            <div class="card">
+            <div class="card" id="card-1">
               <ion-icon class="card-icon" name="code-slash-outline"></ion-icon>
               <h4 class="card-title">Project Title</h4>
               <p class="card-text">
@@ -99,9 +105,11 @@
                 numquam illo ratione voluptatum placeat minima in molestias
                 exercitationem eum, qui maiores? Aspernatur?
               </p>
-              <a href="#" class="link-btn btn--primary">Repository</a>
+              <a href="#" class="link-btn btn--primary" id="card-cta-2"
+                >Repository</a
+              >
             </div>
-            <div class="card">
+            <div class="card" id="card-3">
               <ion-icon class="card-icon" name="code-slash-outline"></ion-icon>
               <h4 class="card-title">Project Title</h4>
               <p class="card-text">
@@ -110,7 +118,9 @@
                 numquam illo ratione voluptatum placeat minima in molestias
                 exercitationem eum, qui maiores? Aspernatur?
               </p>
-              <a href="#" class="link-btn btn--primary">Repository</a>
+              <a href="#" class="link-btn btn--primary" id="card-cta-3"
+                >Repository</a
+              >
             </div>
           </div>
         </div>
@@ -186,10 +196,12 @@
               </button>
             </div>
             <div class="accordion-text close-textbox" id="text-box-2">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              ipsum quisquam voluptatibus necessitatibus esse ex non illo
-              dolorum id perferendis iure saepe recusandae nihil sunt quo sed,
-              voluptates repellat a?
+              <p class="skill-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas ipsum quisquam voluptatibus necessitatibus esse ex non
+                illo dolorum id perferendis iure saepe recusandae nihil sunt quo
+                sed, voluptates repellat a?
+              </p>
             </div>
             <div class="accordion-item">
               <p class="accordion-heading">
@@ -207,10 +219,12 @@
               </button>
             </div>
             <div class="accordion-text close-textbox" id="text-box-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-              ipsum quisquam voluptatibus necessitatibus esse ex non illo
-              dolorum id perferendis iure saepe recusandae nihil sunt quo sed,
-              voluptates repellat a?
+              <p class="skill-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Voluptas ipsum quisquam voluptatibus necessitatibus esse ex non
+                illo dolorum id perferendis iure saepe recusandae nihil sunt quo
+                sed, voluptates repellat a?
+              </p>
             </div>
           </div>
         </div>
