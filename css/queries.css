@@ -62,22 +62,12 @@
   }
 
   .grid--3--columns {
-    gap: 1rem;
-  }
-
-  .grid--3--columns {
     grid-template-columns: repeat(2, 1fr);
     gap: 5.2rem;
   }
 
   .grid-accordion {
     padding: 0 5.8rem;
-  }
-
-  #card-3 {
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin: 0 24rem;
   }
 }
 
@@ -109,6 +99,10 @@
 
   .card-text {
     font-size: 1.6rem;
+  }
+
+  .grid--3--columns {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .skill-description {
@@ -149,12 +143,6 @@
 
   .hero-btn-container {
     margin-bottom: 2.8rem;
-  }
-
-  #card-3 {
-    grid-column: 1 / -1;
-    justify-self: center;
-    margin: 0 18rem;
   }
 
   .mobile-nav-icon {
@@ -206,5 +194,136 @@
   .card-icon {
     height: 2rem;
     width: 2rem;
+  }
+}
+
+/* Small tablets as well */
+@media (max-width: 54em) {
+  .grid--2--columns {
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-btn-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-img-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+  .hero-img {
+    width: 60%;
+  }
+
+  .hero-text-content {
+    margin: 0 2.2rem 4rem 2.2rem;
+  }
+
+  .main-header,
+  .grid-container {
+    padding: 0 2.4rem;
+  }
+
+  .grid--3--columns {
+    gap: 2rem;
+  }
+
+  .accordion {
+    margin: 0 3.2rem;
+  }
+
+  .accordion-heading {
+    font-size: 1.8rem;
+  }
+
+  .accordion-icon[name='chevron-down-outline'],
+  .accordion-icon[name='chevron-up-outline'] {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .rights-reserved {
+    margin-left: 4.2rem;
+  }
+}
+
+@media (max-width: 36em) {
+  .grid--3--columns {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .accordion {
+    margin: 0;
+  }
+
+  html {
+    font-size: 50%;
+  }
+
+  .main-header {
+    padding: 0 2rem;
+  }
+
+  .contact-heading,
+  .address-heading {
+    font-size: 1.4rem;
+  }
+
+  .accordion-heading {
+    font-size: 1.6rem;
+  }
+
+  .hero-img {
+    width: 90%;
+  }
+
+  .logo-img {
+    height: 5rem;
+  }
+
+  .grid-container {
+    padding: 3.2rem 0.08rem;
+  }
+
+  .mobile-nav-icon {
+    height: 2.8rem;
+    width: 2.8rem;
+  }
+
+  .link-btn:link,
+  .link-btn:visited {
+    padding: 1.2rem 2.4rem;
+  }
+
+  .address-text,
+  .contact-text {
+    font-size: 1rem;
+  }
+  .footer-icon {
+    height: 5rem;
+  }
+
+  .grid-accordion {
+    padding: 0 1rem;
+  }
+
+  .grid--footer {
+    gap: 1.6rem;
+  }
+
+  .contact-container {
+    margin-right: 1.4rem;
+  }
+
+  .rights-reserved {
+    margin: 0 0 0 2.8rem;
   }
 }
