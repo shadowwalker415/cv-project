@@ -113,6 +113,10 @@
     width: 95%;
   }
 
+  .mobile-nav-btn {
+    display: block;
+  }
+
   .main-nav {
     background-color: #f0f8ff;
     position: absolute;
@@ -126,10 +130,30 @@
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in;
-    z-index: 9999;
     opacity: 0;
     visibility: hidden;
+    /* pointer-events is set to none to prevent assistive technologies finding  */
+    /* finding the element */
     pointer-events: none;
+  }
+
+  /* This class will be added to the html elementer header */
+  .open-nav .main-nav {
+    transform: translateX(30%);
+    opacity: 0.98;
+    visibility: visible;
+    pointer-events: auto;
+    position: fixed;
+  }
+
+  /* These two classes from line 148 to 155 will be added to the html*/
+  /* header element, depending on the current state of the mobile nav */
+  .open-nav .mobile-nav-icon[name='close-outline'] {
+    display: block;
+  }
+
+  .open-nav .mobile-nav-icon[name='menu-outline'] {
+    display: none;
   }
 
   .link-item:link {
