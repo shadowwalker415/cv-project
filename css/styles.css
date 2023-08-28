@@ -16,6 +16,7 @@ body {
   color: #2e2d2d;
   position: relative;
   transition: all 0.3s;
+  overflow: hidden;
 }
 
 /* ////////////// */
