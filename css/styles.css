@@ -16,7 +16,7 @@ body {
   color: #2e2d2d;
   position: relative;
   transition: all 0.3s;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* ////////////// */
@@ -156,28 +156,6 @@ into the body classList */
 
 .open-textbox {
   display: block;
-}
-
-.error-notification-box {
-  position: fixed;
-  top: 0;
-  left: 30%;
-  padding: 2.4rem 4.8rem;
-  color: #fff;
-  background-color: #d56062;
-  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.075);
-  z-index: 99999;
-}
-
-.error-notification-text {
-  font-size: 2.4rem;
-  text-align: center;
-  font-weight: 500;
-}
-
-.disable-scroll {
-  height: 100%;
-  overflow: hidden;
 }
 
 /* ///////////// */
