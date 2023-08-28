@@ -1,21 +1,18 @@
 html {
-  box-sizing: border-box;
   font-size: 62.5%;
   /* Where 62.5% is the zoom percentage of the user's browser */
 }
 
-*,
-*::before,
-*::after {
+* {
   padding: 0;
   margin: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   line-height: 1;
-  /* font-weight: 400; */
+  font-weight: 400;
   color: #2e2d2d;
   position: relative;
   transition: all 0.3s;
@@ -91,7 +88,7 @@ body {
 .grid-container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 1rem 3.2rem 3.2rem;
+  padding: 3.2rem 3.2rem;
   align-items: center;
   margin-bottom: 4rem;
 }
@@ -160,6 +157,28 @@ into the body classList */
   display: block;
 }
 
+.error-notification-box {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  padding: 2.4rem 4.8rem;
+  color: #fff;
+  background-color: #d56062;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.075);
+  z-index: 99999;
+}
+
+.error-notification-text {
+  font-size: 2.4rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.disable-scroll {
+  height: 100%;
+  overflow: hidden;
+}
+
 /* ///////////// */
 /* Hero Section */
 /* //////////// */
@@ -182,8 +201,7 @@ into the body classList */
 }
 
 .hero-img {
-  max-width: 75%;
-  height: auto;
+  width: 80%;
 }
 
 .nav-links {
@@ -194,11 +212,9 @@ into the body classList */
 }
 
 .mobile-nav-btn {
-  top: 0;
-  left: 0;
   background: none;
   cursor: pointer;
-  /* outline: none; */
+  outline: none;
   border: none;
   display: none;
 }
@@ -206,15 +222,12 @@ into the body classList */
 .mobile-nav-icon {
   height: 4.2rem;
   width: 4.2rem;
+  display: block;
+  color: #05325f;
+}
+
+.mobile-nav-icon[name='close-outline'] {
   display: none;
-}
-
-.show-mobile-menu .mobile-nav-icon[name='menu-outline'] {
-  display: block;
-}
-
-.show-close-icon .mobile-nav-icon[name='close-outline'] {
-  display: block;
 }
 
 .link-item:link,
@@ -240,7 +253,7 @@ into the body classList */
   margin-bottom: 4.8rem;
 }
 
-.btn-container {
+.hero-btn-container {
   display: flex;
   margin-top: 2rem;
   gap: 2rem;
@@ -254,14 +267,20 @@ into the body classList */
   margin-top: 7rem;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+}
+
 .card-title {
   font-size: 1.5rem;
-  margin-bottom: 2rem;
   font-weight: 700;
 }
 
 .card-text {
-  margin-bottom: 4rem;
   font-size: 1.8rem;
   line-height: 1.6;
 }
@@ -273,7 +292,6 @@ into the body classList */
   background-color: #edf2ff;
   padding: 0.5rem;
   border-radius: 25rem;
-  margin-bottom: 4rem;
 }
 
 /* ///////// ///////*/
@@ -297,6 +315,9 @@ into the body classList */
   flex-direction: column;
   gap: 2.4rem;
   margin: 0 8rem;
+  border: 0.2rem solid #05325f;
+  padding: 0 2.4rem 2.4rem 2.4rem;
+  margin-bottom: 3.2rem;
 }
 
 .accordion-item {
@@ -346,7 +367,6 @@ into the body classList */
   font-size: 1.8rem;
   line-height: 1.6;
   margin: 0 8rem 1.6rem 8rem;
-  /* display: none; */
 }
 
 .skill-list {
@@ -366,8 +386,7 @@ into the body classList */
 }
 
 .contact-heading,
-.address-heading,
-.social-heading {
+.address-heading {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1.6rem;
