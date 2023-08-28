@@ -1,6 +1,7 @@
 html {
   font-size: 62.5%;
   /* Where 62.5% is the zoom percentage of the user's browser */
+  overflow-x: hidden;
 }
 
 * {
@@ -171,8 +172,6 @@ into the body classList */
   padding: 0 4.8rem;
   background-color: #edf2ff;
   position: relative;
-  top: 0;
-  left: 0;
 }
 
 .hero-section {
