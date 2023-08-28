@@ -140,7 +140,7 @@
   /* This class will be added to the html elementer header */
   .open-nav .main-nav {
     transform: translateX(30%);
-    opacity: 0.98;
+    opacity: 1;
     visibility: visible;
     pointer-events: auto;
     position: fixed;
